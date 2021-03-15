@@ -1,17 +1,16 @@
-# Año bisiesto
-# Equipo 2: Roberto, Alejandra y Juan Pablo Valdez
-# Fecha: 25/02/2021
+#entrada
+año = int(input("ingrese un año: "))
 
-#Entradas
-a = int(input("Ingrese el año a verificar: "))
+#proceso
+if año%4 == 0 and año%100 != 0:
+  resultado = "Ese año sí es bisiesto"
+elif año%4 == 0 and año%100 == 0 and año%400 == 0:
+  resultado = "Ese año sí es bisiesto"
+elif año%4 == 0 and año%100 == 0 and año%400 != 0:
+  resultado = "Ese año no es bisiesto"
+elif año%4 != 0:
+  resultado = "Ese año no es bisiesto"
 
-#Proceso
-if a % 4 != 0: 
-	print("El año ingresado no es bisiesto")
-elif a % 4 == 0 and a % 100 != 0: 
-	print("El año ingresado sí es bisiesto")
-elif a % 4 == 0 and a % 100 == 0 and a % 400 != 0:
-	print("El año ingresado sí no es bisiesto")
-elif a % 4 == 0 and a % 100 == 0 and a % 400 == 0: 
-	print("El año ingresado sí es bisiesto")
+#salida
+print(resultado)
 
